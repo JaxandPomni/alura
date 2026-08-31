@@ -48,17 +48,22 @@
     <p class="escritor-da-noticia">Por: Kamily Maia</p>
     <p>Boas-vindas caros leitores! Aqui irei publicar notícias fresquinhas do dia a dia para manter você atualizado.</p>
 <button>🤔 <span>0</span></button>
+<button>🕵️‍♀️ <span>0</span></button>
   </div>
   </main>
 </body>
- <script>
-  const botao = Document.querySelector("button"):
-  botao.addEventListener("click", botaoClicado);
+<script>
+  const botoes = Document.querySelectorAll("button");
 
-  function botaoClicado(){
+  botao.addEventListener("click", botaoClicado);
+  botoes.forEach(function(botao){
+   function botaoClicado(){
    console.log("fui clicado");
    let texto = botao.querySelector("span");
    texto.textContent++;
   }
+  }
+
+)
  </script>
 </html>
