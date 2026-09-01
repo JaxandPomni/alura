@@ -1,9 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Minha página de notícias</title>
+
   <style>
     header {
       background-color: #25376e;
@@ -14,6 +15,7 @@
       padding: 16px;
       border: 5px solid #000;
     }
+
     main {
       background-color: #FFFFFF;
       color: #25376e;
@@ -21,58 +23,75 @@
       margin: 0 auto;
       padding: 16px;
       display: flex;
+      gap: 20px;
     }
+
     img {
       width: 80px;
       height: 80px;
+      object-fit: cover;
     }
-    .escritora-da-noticia {
-       font-weight: bold;
 
+    .escritor-da-noticia {
+      font-weight: bold;
     }
-  
-  
-    
+
+    button {
+      cursor: pointer;
+      margin-right: 8px;
+      padding: 5px 10px;
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>Minha página é uma página de notícias</h1>
     <p>Aqui irei compartilhar notícias para espalhar informação</p>
   </header>
 
   <main>
+
     <article>
-
+      <img
+        src="Gemini_Generated_Image_rons5nrons5nrons.png"
+        alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
+      >
     </article>
-    <img src="Gemini_Generated_Image_rons5nrons5nrons.png" alt="aparece em destaque em azul-escuro, acompanhado pela sigla "BR" em verde e, no rodapé, pelo subtítulo "JORNALISMO E ATUALIZAÇÃO" em fonte mais fina. A paleta de cores combina azul e verde, unindo credibilidade e modernidade.">
+
     <div>
-<h2>Primeira notícia</h2>
-    <p class="escritor-da-noticia">Por: Kamily Maia</p>
-    <p>Boas-vindas caros leitores! Aqui irei publicar notícias fresquinhas do dia a dia para manter você atualizado.</p>
-<button>🤔 <span>0</span></button>
-<button>🕵️‍♀️ <span>0</span></button>
-  </div>
+      <h2>Primeira notícia</h2>
+
+      <p class="escritor-da-noticia">Por: Kamily Maia</p>
+
+      <p>
+        Boas-vindas, caros leitores! Aqui irei publicar notícias
+        fresquinhas do dia a dia para manter você atualizado.
+      </p>
+
+      <button>🤔 <span>0</span></button>
+      <button>🕵️‍♀️ <span>0</span></button>
+    </div>
+
   </main>
+
+  <script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function(botao) {
+      let curtiu = false;
+
+      botao.addEventListener("click", function() {
+        let texto = botao.querySelector("span");
+
+        if (curtiu === false) {
+          texto.textContent++;
+          curtiu = true;
+        }
+      });
+    });
+  </script>
+
 </body>
-<script>
-  const botoes = Document.querySelectorAll("button");
-
-  botao.addEventListener("click", botaoClicado);
-  botoes.forEach(function(botao){
-    let curtiu = false;
-   function botaoClicado(){
-   console.log("fui clicado");
-   let texto = botao.querySelector("span");
-   if(curtiu === false){
-     texto.textContent++;
-     curtiu = true;
-
-
-   }
-  }
-  }
-
-)
- </script>
 </html>
