@@ -1,58 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha página de notícias</title>
-
-  <style>
-    header {
-      background-color: #25376e;
-      color: #FFFFFF;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 16px;
-      border: 5px solid #000;
-    }
-
-    main {
-      background-color: #FFFFFF;
-      color: #25376e;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 16px;
-      display: flex;
-      gap: 20px;
-    }
-
-    img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-    }
-
-    .escritor-da-noticia {
-      font-weight: bold;
-    }
-
-    button {
-      cursor: pointer;
-      margin-right: 8px;
-      padding: 5px 10px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <h1>Minha página é uma página de notícias</h1>
-    <p>Aqui irei compartilhar notícias para espalhar informação</p>
-  </header>
-
-  <main>
-
     <article>
       <img
         src="Gemini_Generated_Image_rons5nrons5nrons.png"
@@ -76,17 +21,30 @@
 
   </main>
 
-  <script>
-    const botoes = document.querySelectorAll("button");
+  <!-- Segunda postagem -->
+  <main>
 
-    botoes.forEach(function(botao) {
-      botao.addEventListener("click", function() {
-        const texto = botao.querySelector("span");
+    <article>
+      <img
+        src="Gemini_Generated_Image_rons5nrons5nrons.png"
+        alt="Logo do jornal"
+      >
+    </article>
 
-        texto.textContent = Number(texto.textContent) + 1;
-      });
-    });
-  </script>
+    <div>
+      <h2>Segunda notícia</h2>
 
-</body>
-</html>
+      <p class="escritor-da-noticia">Por: Kamily Maia</p>
+
+      <p>
+        A informação está cada vez mais presente no nosso dia a dia.
+        Por isso, é importante acompanhar notícias e buscar informações
+        de fontes confiáveis para ficar sempre bem informado.
+      </p>
+
+      <button>🤔 <span>0</span></button>
+      <button>🕵️‍♀️ <span>0</span></button>
+    </div>
+
+  </main>
+
