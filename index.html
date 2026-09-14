@@ -86,7 +86,7 @@
     }
 
     /* Botões de Reação */
-    button {
+    .btn-reacao {
       background-color: #eef2f7;
       border: 1px solid #cbd5e1;
       padding: 6px 12px;
@@ -94,11 +94,15 @@
       cursor: pointer;
       font-size: 0.9rem;
       margin-right: 8px;
-      transition: background-color 0.2s;
+      transition: all 0.2s;
     }
 
-    button:hover {
+    .btn-reacao:hover {
       background-color: #e2e8f0;
+    }
+
+    .btn-reacao:active {
+      transform: scale(0.95);
     }
 
     /* Responsividade para telas menores (celulares) */
@@ -142,8 +146,8 @@
           fresquinhas do dia a dia para manter você atualizado.
         </p>
 
-        <button>🤔 <span>0</span></button>
-        <button>🕵️‍♀️ <span>0</span></button>
+        <button class="btn-reacao">🤔 <span>0</span></button>
+        <button class="btn-reacao">🕵️‍♀️ <span>0</span></button>
       </div>
     </article>
 
@@ -165,12 +169,23 @@
           de fontes confiáveis para ficar sempre bem informado.
         </p>
 
-        <button>🤔 <span>0</span></button>
-        <button>🕵️‍♀️ <span>0</span></button>
+        <button class="btn-reacao">🤔 <span>0</span></button>
+        <button class="btn-reacao">🕵️‍♀️ <span>0</span></button>
       </div>
     </article>
 
   </main>
+
+  <!-- Script para ativar o clique nos botões -->
+  <script>
+    document.querySelectorAll('.btn-reacao').forEach(button => {
+      button.addEventListener('click', () => {
+        const span = button.querySelector('span');
+        let count = parseInt(span.textContent);
+        span.textContent = count + 1;
+      });
+    });
+  </script>
 
 </body>
 </html>
