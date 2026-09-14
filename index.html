@@ -1,50 +1,176 @@
-<main>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornalismo e Atualização</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- Primeira postagem -->
-  <article>
-    <img
-      src="Gemini_Generated_Image_rons5nrons5nrons.png"
-      alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
-      style="width: 150px; height: auto;"
-    >
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
 
-    <div>
-      <h2>Primeira notícia</h2>
+    /* Cabeçalho do site (Faixa Azul) */
+    .cabecalho-site {
+      background-color: #0d2a4a; /* Azul escuro */
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #00a859; /* Detalhe em verde */
+    }
 
-      <p class="escritor-da-noticia">Por: Kamily Maia</p>
+    .cabecalho-site h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
 
-      <p>
-        Boas-vindas, caros leitores! Aqui irei publicar notícias
-        fresquinhas do dia a dia para manter você atualizado.
-      </p>
+    .cabecalho-site p {
+      font-size: 0.95rem;
+      color: #d1d5db;
+    }
 
-      <button>🤔 <span>0</span></button>
-      <button>🕵️‍♀️ <span>0</span></button>
-    </div>
-  </article>
+    /* Layout do Conteúdo Principal */
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
 
-  <!-- Segunda postagem -->
-  <article>
-    <img
-      src="Gemini_Generated_Image_rons5nrons5nrons.png"
-      alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
-      style="width: 150px; height: auto;"
-    >
+    /* Cartão do Artigo/Notícia */
+    article {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
 
-    <div>
-      <h2>Segunda notícia</h2>
+    /* Imagem menor e ajustada */
+    article img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
 
-      <p class="escritor-da-noticia">Por: Kamily Maia</p>
+    /* Conteúdo do Artigo */
+    .conteudo-noticia h2 {
+      font-size: 1.3rem;
+      color: #0d2a4a;
+      margin-bottom: 4px;
+    }
 
-      <p>
-        A informação está cada vez mais presente no nosso dia a dia.
-        Por isso, é importante acompanhar notícias e buscar informações
-        de fontes confiáveis para ficar sempre bem informado.
-      </p>
+    .escritor-da-noticia {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
 
-      <button>🤔 <span>0</span></button>
-      <button>🕵️‍♀️ <span>0</span></button>
-    </div>
-  </article>
+    .conteudo-noticia p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
 
-</main>
+    /* Botões de Reação */
+    button {
+      background-color: #eef2f7;
+      border: 1px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-right: 8px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #e2e8f0;
+    }
+
+    /* Responsividade para telas menores (celulares) */
+    @media (max-width: 600px) {
+      article {
+        flex-direction: column;
+      }
+
+      article img {
+        width: 100%;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho com a barra azul -->
+  <header class="cabecalho-site">
+    <h1>Jornalismo e Atualização</h1>
+    <p>As principais notícias do dia em um só lugar</p>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+
+    <!-- Primeira postagem -->
+    <article>
+      <img
+        src="Gemini_Generated_Image_rons5nrons5nrons.png"
+        alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
+      >
+
+      <div class="conteudo-noticia">
+        <h2>Primeira notícia</h2>
+
+        <p class="escritor-da-noticia">Por: Kamily Maia</p>
+
+        <p>
+          Boas-vindas, caros leitores! Aqui irei publicar notícias
+          fresquinhas do dia a dia para manter você atualizado.
+        </p>
+
+        <button>🤔 <span>0</span></button>
+        <button>🕵️‍♀️ <span>0</span></button>
+      </div>
+    </article>
+
+    <!-- Segunda postagem -->
+    <article>
+      <img
+        src="Gemini_Generated_Image_rons5nrons5nrons.png"
+        alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
+      >
+
+      <div class="conteudo-noticia">
+        <h2>Segunda notícia</h2>
+
+        <p class="escritor-da-noticia">Por: Kamily Maia</p>
+
+        <p>
+          A informação está cada vez mais presente no nosso dia a dia.
+          Por isso, é importante acompanhar notícias e buscar informações
+          de fontes confiáveis para ficar sempre bem informado.
+        </p>
+
+        <button>🤔 <span>0</span></button>
+        <button>🕵️‍♀️ <span>0</span></button>
+      </div>
+    </article>
+
+  </main>
+
+</body>
+</html>
