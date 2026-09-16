@@ -44,13 +44,14 @@
       padding: 0 20px;
     }
 
-    /* Cartão do Artigo/Notícia */
+    /* Cartão do Artigo/Notícia sem bordas ou sombras */
     article {
       background: #ffffff;
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      border: none; /* Garante que não haja borda */
+      box-shadow: none; /* Remove a sombra ao redor */
       display: flex;
       gap: 20px;
       align-items: flex-start;
@@ -120,16 +121,13 @@
 </head>
 <body>
 
-  <!-- Cabeçalho com a barra azul -->
   <header class="cabecalho-site">
     <h1>Jornalismo e Atualização</h1>
     <p>As principais notícias do dia em um só lugar</p>
   </header>
 
-  <!-- Conteúdo Principal -->
   <main>
 
-    <!-- Primeira postagem -->
     <article>
       <img
         src="Gemini_Generated_Image_rons5nrons5nrons.png"
@@ -151,11 +149,10 @@
       </div>
     </article>
 
-    <!-- Segunda postagem -->
     <article>
       <img
-      src="66475daf3c22310e2f1bbe6f105db3d9.gif"
-        alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
+        src="./66475daf3c22310e2f1bbe6f105db3d9.gif"
+        alt="GIF informativo sobre notícias"
       >
 
       <div class="conteudo-noticia">
@@ -176,7 +173,6 @@
 
   </main>
 
-  <!-- Script para ativar o clique nos botões -->
   <script>
     document.querySelectorAll('.btn-reacao').forEach(button => {
       button.addEventListener('click', () => {
