@@ -1,102 +1,183 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornalismo e Atualização</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* Cabeçalho do site (Faixa Azul) */
-.cabecalho-site {
-  background-color: #0d2a4a; /* Azul escuro */
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 4px solid #00a859; /* Detalhe em verde */
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
 
-.cabecalho-site h1 {
-  font-size: 1.8rem;
-  margin-bottom: 5px;
-}
+    /* Cabeçalho do site (Faixa Azul) */
+    .cabecalho-site {
+      background-color: #0d2a4a;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #00a859;
+    }
 
-.cabecalho-site p {
-  font-size: 0.95rem;
-  color: #d1d5db;
-}
+    .cabecalho-site h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
 
-/* Layout do Conteúdo Principal */
-main {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
+    .cabecalho-site p {
+      font-size: 0.95rem;
+      color: #d1d5db;
+    }
 
-/* Cartão do Artigo/Notícia sem bordas ou sombras */
-article {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: none;
-  box-shadow: none; 
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
+    /* Layout do Conteúdo Principal */
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
 
-article img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 6px;
-  flex-shrink: 0;
-}
+    /* Cartão do Artigo/Notícia */
+    article {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
 
-.conteudo-noticia h2 {
-  font-size: 1.3rem;
-  color: #0d2a4a;
-  margin-bottom: 4px;
-}
+    article img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
 
-.escritor-da-noticia {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 12px;
-  font-weight: bold;
-}
+    .conteudo-noticia h2 {
+      font-size: 1.3rem;
+      color: #0d2a4a;
+      margin-bottom: 4px;
+    }
 
-.conteudo-noticia p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
+    .escritor-da-noticia {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
 
-.btn-reacao {
-  background-color: #eef2f7;
-  border: 1px solid #cbd5e1;
-  padding: 6px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  margin-right: 8px;
-  transition: all 0.2s;
-}
+    .conteudo-noticia p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
 
-.btn-reacao:hover {
-  background-color: #e2e8f0;
-}
+    .btn-reacao {
+      background-color: #eef2f7;
+      border: 1px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-right: 8px;
+      transition: all 0.2s;
+    }
 
-.btn-reacao:active {
-  transform: scale(0.95);
-}
+    .btn-reacao:hover {
+      background-color: #e2e8f0;
+    }
 
-@media (max-width: 600px) {
-  article {
-    flex-direction: column;
-  }
+    .btn-reacao:active {
+      transform: scale(0.95);
+    }
 
-  article img {
-    width: 100%;
-    height: 180px;
-  }
-}
+    @media (max-width: 600px) {
+      article {
+        flex-direction: column;
+      }
 
+      article img {
+        width: 100%;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cabecalho-site">
+    <h1>Jornalismo e Atualização</h1>
+    <p>As principais notícias do dia em um só lugar</p>
+  </header>
+
+  <main>
+    <!-- PRIMEIRA NOTÍCIA -->
+    <article>
+      <img
+        src="Gemini_Generated_Image_rons5nrons5nrons.png"
+        alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
+      >
+      <div class="conteudo-noticia">
+        <h2>Primeira notícia</h2>
+        <p class="escritor-da-noticia">Por: Kamily Maia</p>
+        <p>
+          Boas-vindas, caros leitores! Aqui irei publicar notícias
+          fresquinhas do dia a dia para manter você atualizado.
+        </p>
+        <button class="btn-reacao" type="button">
+          🤔 <span>0</span>
+        </button>
+        <button class="btn-reacao" type="button">
+          🕵️‍♀️ <span>0</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- SEGUNDA NOTÍCIA -->
+    <article>
+      <img
+        src="carro-policia.gif"
+        alt="Animação de um carro de polícia em movimento com luzes acesas"
+      >
+      <div class="conteudo-noticia">
+        <h2>Segunda notícia</h2>
+        <p class="escritor-da-noticia">Por: Kamily Maia</p>
+        <p>
+          A informação está cada vez mais presente no nosso dia a dia.
+          Por isso, é importante acompanhar notícias e buscar informações
+          de fontes confiáveis para ficar sempre bem informado.
+        </p>
+        <button class="btn-reacao" type="button">
+          🤔 <span>0</span>
+        </button>
+        <button class="btn-reacao" type="button">
+          🕵️‍♀️ <span>0</span>
+        </button>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    document.querySelectorAll('.btn-reacao').forEach(button => {
+      button.addEventListener('click', () => {
+        const span = button.querySelector('span');
+        let count = parseInt(span.textContent, 10);
+        span.textContent = count + 1;
+      });
+    });
+  </script>
+
+</body>
+</html>
