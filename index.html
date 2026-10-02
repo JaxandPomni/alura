@@ -14,7 +14,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
+      background-color: #63B8FF;
       color: #333;
     }
 
@@ -24,7 +24,7 @@
       color: #ffffff;
       padding: 20px;
       text-align: center;
-      border-bottom: 4px solid #00a859;
+      border-bottom: 4px solid #ffffff;
     }
 
     .cabecalho-site h1 {
@@ -50,7 +50,7 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
-      border: none;
+      border: 3px solid #1b1b9d;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       display: flex;
       gap: 20px;
@@ -102,6 +102,50 @@
     .btn-reacao:active {
       transform: scale(0.95);
     }
+    .btn-lua {
+      position: fixed; /* Fixa em relação à tela */
+      bottom: 20px;    /* Distância do fundo */
+      right: 20px;     /* Distância da direita */
+      width: 60px;     /* Largura */
+      height: 60px;    /* Altura */
+      border-radius: 50%; /* Deixa redondo */
+      background-color: #007bff; /* Cor de fundo */
+      color: white;    /* Cor do ícone/texto */
+      border: none;    /* Remove borda padrão */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para dar efeito de "flutuar" */
+      cursor: pointer;
+      display: flex;   /* Para centralizar o ícone */
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      z-index: 1000;   /* Garante que fique acima de tudo */
+      transition: transform 0.2s; /* Animação suave */
+    }
+    .btn-lua:hover {
+      transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+      background-color: #0056b3;
+    }
+    .btn-lua > svg {
+      transform: rotate(210deg);
+      transform-origin: center;
+      width: 20px;
+      height: 20px;
+    }
+
+    .noite {
+      background-color: #0d2a4a;
+      color: #ffffff;
+      border-color: #ffffff;
+
+       .escritor-da-noticia {
+          color: #fff;
+        }
+
+        .conteudo-noticia > h2 {
+          color: #fff;
+        }
+    }
+
 
     @media (max-width: 600px) {
       article {
@@ -115,7 +159,7 @@
     }
   </style>
 </head>
-<body>
+<body class="dia">
 
   <header class="cabecalho-site">
     <h1>Jornalismo e Atualização</h1>
@@ -123,8 +167,13 @@
   </header>
 
   <main>
+    <button id="lua" class="btn-lua"> 
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor">
+        <path d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/>
+      </svg>
+    </button>
     <!-- PRIMEIRA NOTÍCIA -->
-    <article>
+    <article class="dia">
       <img
         src="Gemini_Generated_Image_rons5nrons5nrons.png"
         alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
@@ -146,9 +195,54 @@
     </article>
 
     <!-- SEGUNDA NOTÍCIA -->
-    <article>
+    <article class="dia">
       <img
-        src="https://usync.ingage.tech?gdpr=&gdpr_consent=&us_privacy=&redirect=https%3A%2F%2Fpbs.fsrv.io%2F%2Fsetuid%3Fbidder%3Dinsticator%26gdpr%3D%26gdpr_consent%3D%26us_privacy%3D%26gpp%3D%26gpp_sid%3D%26f%3Db%26uid%3D%24UID""
+        src="policia.webp"
+        alt="Carro de polícia com sirenes acesas visto pelo retrovisor"
+      >
+      <div class="conteudo-noticia">
+        <h2>Segunda notícia</h2>
+        <p class="escritor-da-noticia">Por: Kamily Maia</p>
+        <p>
+          A informação está cada vez mais presente no nosso dia a dia.
+          Por isso, é importante acompanhar notícias e buscar informações
+          de fontes confiáveis para ficar sempre bem informado.
+        </p>
+
+       <p>
+          fonte
+        </p>
+        <button class="btn-reacao" type="button">
+          🤔 <span>0</span>
+        </button>
+        <button class="btn-reacao" type="button">
+          🕵️‍♀️ <span>0</span>
+        </button>
+      </div>
+    </article>
+    <article class="dia">
+      <img
+        src="Gemini_Generated_Image_rons5nrons5nrons.png"
+        alt="Logo em azul-escuro com a sigla BR em verde e o subtítulo Jornalismo e Atualização"
+      >
+      <div class="conteudo-noticia">
+        <h2>Primeira notícia</h2>
+        <p class="escritor-da-noticia">Por: Kamily Maia</p>
+        <p>
+          Boas-vindas, caros leitores! Aqui irei publicar notícias
+          fresquinhas do dia a dia para manter você atualizado.
+        </p>
+        <button class="btn-reacao" type="button">
+          🤔 <span>0</span>
+        </button>
+        <button class="btn-reacao" type="button">
+          🕵️‍♀️ <span>0</span>
+        </button>
+      </div>
+    </article>
+    <article class="dia">
+      <img
+        src="policia.webp"
         alt="Carro de polícia com sirenes acesas visto pelo retrovisor"
       >
       <div class="conteudo-noticia">
@@ -169,14 +263,36 @@
     </article>
   </main>
 
-  <script>
+  <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const botao = document.getElementById('lua'); // Seu botão
+
+      if (botao) {
+        botao.addEventListener('click', () => {
+          // 1. Pega todos os elementos que têm a classe 'dia'
+          const elementosDia = document.querySelectorAll('.dia');
+
+          // 2. Percorre cada um deles e adiciona/remove a classe 'noite'
+          elementosDia.forEach(elemento => {
+            elemento.classList.toggle('noite');
+          });
+        });
+      } else {
+        console.error('Botão com id "lua" não encontrado.');
+      }
+    });
+
     document.querySelectorAll('.btn-reacao').forEach(button => {
       button.addEventListener('click', () => {
         const span = button.querySelector('span');
         let count = parseInt(span.textContent, 10);
         span.textContent = count + 1;
       });
+
     });
+
+   
   </script>
 
 </body>
